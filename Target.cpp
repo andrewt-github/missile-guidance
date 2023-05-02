@@ -7,7 +7,7 @@ class Target
 public:
     Target()
     {
-        
+        cout << "Target created" << endl;
     }
 
 private:

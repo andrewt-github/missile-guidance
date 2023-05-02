@@ -5,6 +5,8 @@ using namespace std;
 
 class Vector
 {
+    double pi = 3.141592653589793;
+
 public:
     float x;
     float y;
@@ -33,16 +35,22 @@ public:
     {
         return acos((z / vectorMagnitude)) * (180 / pi);
     }
-
-private:
-    static const double pi = 3.1415926535897932384626433832795028841971693993751058209;
 };
 
 int main()
 {
+    cout << "-----------------------------" << endl;
+    
+
     Vector vector1(2, 3, 5);
     cout << "X: " << vector1.x << endl << "Y: " << vector1.y << endl << "Z: " << vector1.z << endl;
-    cout << "Magnitude is: " << vector1.vectorMagnitude << endl;
+    cout << "Magnitude is: " << vector1.vectorMagnitude << "\n" << endl;
 
-    cout << "Angles are: \n" << "X: " << vector1.getXAngle() << endl << "Y: " << vector1.getYAngle() << endl << "Z: " << vector1.getZAngle() << endl;
+    cout << "Angles are: " << endl << " X: " << vector1.getXAngle() << endl << " Y: " << vector1.getYAngle() << endl << " Z: " << vector1.getZAngle() << endl;
+
+
+
+
+
+    cout << "-----------------------------" << endl;
 }
