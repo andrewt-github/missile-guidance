@@ -16,6 +16,12 @@ public:
 
     Vector(float xC, float yC, float zC)
     {
+        if(abs(xC) > 1 || abs(yC) > 1 || abs(zC) > 1)
+        {
+            cout << "Coordinates exceed bounds" << endl;
+            return;
+        }
+
         x = xC;
         y = yC;
         z = zC;
@@ -41,8 +47,8 @@ int main()
 {
     cout << "-----------------------------" << endl;
     
-
-    Vector vector1(2, 3, 5);
+    //restricted from (-1,-1,-1) to (1,1,1)
+    Vector vector1(1, 0, 0);
     cout << "X: " << vector1.x << endl << "Y: " << vector1.y << endl << "Z: " << vector1.z << endl;
     cout << "Magnitude is: " << vector1.vectorMagnitude << "\n" << endl;
 
